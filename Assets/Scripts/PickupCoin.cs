@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Reset : MonoBehaviour
+public class PickupCoin : MonoBehaviour
 {
 
     // Use this for initialization
@@ -19,6 +19,6 @@ public class Reset : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
-            Application.LoadLevel(Application.loadedLevel);
+            Destroy(gameObject);
     }
 }
